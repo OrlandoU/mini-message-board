@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+        
+    form(method='POST' action='/new')
+        h1 New Message
+        label(for="message")  Message
+            input(type="text" id='message' placeholder='Type your message here...' name='message' required)
+        label(for="user")  User
+            input(type="text" id='user' placeholder='Enter your username...' name='user' required)
+        div(class='button-container')
+            button(class='button-index') Send Message
+            a(class='button-index' href='/') Return to Board

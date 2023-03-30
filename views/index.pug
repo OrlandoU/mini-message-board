@@ -1,5 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div 
+    h1= title
+    p Welcome to the #{title}
+  div(class='board') 
+    ul 
+      each val in messages 
+        li(class='note')
+          img(src="https://img.freepik.com/vector-premium/chincheta-roja-chincheta-redonda-metal-adjuntar-notas-documentos-fijados_176411-1055.jpg?w=2000", alt="Tachuela")
+          div(class='message')= val.text  
+          div(class='user-name')= val.user + ' · '+ val.added.toLocaleString().slice(0, 9)
+  a(href="/new" class='button-index') New Note 

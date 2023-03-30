@@ -1,8 +1,153 @@
 body {
+ 
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px;
+  margin: 0px auto;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: 100vh;
+  justify-content: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('../images/blob-scene-haikei.svg');
+  height: 100vh;
 }
-
+*{
+  box-sizing: border-box;
+}
 a {
   color: #00B7FF;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 48px 16px;
+  border: 1px solid gainsboro;
+  width: clamp(250px, 100%, 450px);
+  border-radius: 6px;
+}
+form h1{
+  margin-bottom: 24px;
+}
+
+input {
+  padding: 10px 8px;
+  font-size: 1rem;
+  outline-color: #00B7FF;
+  border: 1px solid rgb(182, 182, 182);
+  border-radius: 6px;
+}
+
+
+.board {
+  background-color: rgb(97, 58, 58);
+  padding: 22px;
+  min-height: 600px;
+  max-width: 800px;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+  border: 8px outset #995b5b;
+}
+
+.note {
+  list-style: none;
+  background-color: white;
+  padding: 8px 10px;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  min-height: 120px;
+  box-shadow: 7px 6px 2px rgba(0, 0, 0, 0.479);
+}
+
+.user-name {
+  color: rgb(146, 146, 172);
+  font-size: .9rem;
+  text-align: center;
+}
+
+.message {
+  flex: 1;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+ul {
+  display: flex;
+  gap: 16px;
+  margin: 0px;
+  padding: 0px;
+  flex-wrap: wrap;
+}
+
+img {
+  margin: 0 auto;
+  width: 28px;
+  margin-bottom: 6px;
+}
+
+h1 {
+  color: rgb(97, 58, 58);
+  margin-bottom: 0px;
+  width: fit-content;
+  padding: 0px 48px;
+  font-size: 2.2rem;
+  margin: auto;
+  border-bottom: 3px solid rgb(97, 58, 58);
+}
+
+p {
+  margin: 2px;
+  text-align: center;
+  color: rgb(97, 58, 58);
+  font-weight: 600;
+}
+
+.button-index{
+  border: 1px solid rgb(212, 212, 212);
+  color: rgb(97, 58, 58);
+  background-color: white;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: .5rem 1.25rem;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: 200ms;
+  width: fit-content;
+  margin: auto;
+  user-select: none;
+  margin-top: 8px;
+}
+
+.button-index:hover{
+  color: white;
+  transform: translateY(-4px);
+  background-color: rgb(97, 58, 58);
+  border: 1px solid rgb(97, 58, 58);
+}
+
+label{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: rgb(97, 58, 58);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.button-container{
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+.button-container > *{
+  margin: 0px;
 }
